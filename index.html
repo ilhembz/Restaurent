@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="restau.css">
+    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Restaurent</title>
+</head>
+<body>
+       
+      <div class="topnav">
+        <a href="#">Home</a>
+        <a href="#">Reservation</a>
+        <a href="#">Contact</a>
+        <a href="#" style="float:right" class="active">Sign Up</a>
+      </div>
+      
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <div class="banner-title">
+                <h1>Food <span>doesn't have <br>a religion.</span></h1>              </div>
+          </div>
+          <div class="card">
+             <!--Gallery--------------------------------->
+           <div class="all">
+            <div class="responsive">
+             <div class="gallery">
+               <a target="_blank" href="img_forest.jpg">
+                <img src="C:\Users\Nitro5\Desktop\HTML Project\Restaurent Project\Pr2\pic1.PNG" alt="Mountains" width="600" height="400">
+               </a>
+               <div class="desc"><b>Dishe 1</b></div>
+             </div>
+           </div>
+           
+           <div class="responsive">
+             <div class="gallery">
+               <a target="_blank" href="img_lights.jpg">
+                <img src="C:\Users\Nitro5\Desktop\HTML Project\Restaurent Project\Pr2\pic1.PNG" alt="Mountains" width="600" height="400">
+               </a>
+               <div class="desc"><b>Dishe 2</b></div>
+             </div>
+           </div>
+           
+           <div class="responsive">
+             <div class="gallery">
+               <a target="_blank" href="img_mountains.jpg">
+                 <img src="C:\Users\Nitro5\Desktop\HTML Project\Restaurent Project\Pr2\pic1.PNG" alt="Mountains" width="600" height="400">
+               </a>
+               <div class="desc"><b>Dishe 3</b></div>
+             </div>
+           </div>
+           
+           <div class="clearfix"></div></div>
+           <!--End Gallery--------------------------------->
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <h2>Location</h2>
+            <!--Maps------------------->
+<h3> Google Maps </h3>
+<!--The div element for the map -->
+<div id="map"></div>
+
+<!-- 
+ The `defer` attribute causes the callback to execute after the full HTML
+ document has been parsed. For non-blocking uses, avoiding race conditions,
+ and consistent behavior across browsers, consider loading using Promises
+ with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+-->
+
+<!--End maps-->
+          </div>
+          <div class="card">
+            <h3>Follow me</h3>
+            <div class="social-icon">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-pinterest"></i>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <h5>Copyrights Reserved 2022</h5>
+      </div>
+
+      <!--Maps script-->
+      <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+  defer
+></script>
+<script>
+
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const uluru = { lat: 36.420956, lng: 3.107349 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
+
+window.initMap = initMap;
+
+</script>
+</body>
+</html>
